@@ -62,3 +62,6 @@ typings/
 
 # raw data bundles
 bundles/
+
+# macos
+.DS_Store
