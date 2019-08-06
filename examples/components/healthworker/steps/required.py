@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+import os
 from behave import given, when, then  # pylint: disable=no-name-in-module
 import requests
 
 
-local = 'http://localhost:8080/hapi-fhir-jpaserver/fhir/'
+local = os.getenv('FHIR_SERVER',
+                  'http://localhost:8080/hapi-fhir-jpaserver/fhir/')
 
 
 @given('fhir server returns a capability statement for practitioner')

@@ -21,8 +21,9 @@ The `given`, `when`, and `then` statements become function decorators in the ass
 
 Most languages have a library to support feature files. This example uses the behave package for Python. To use it, install Python and behave
 
-Modify steps/required.py to your preferred FHIR server. Then run `behave`.
+Modify steps/required.py to your preferred FHIR server using an environment variable `FHIR_SERVER` or accept the default in the file.
 
+Then run `behave`.
 ```txt
 $ behave
 # output:
