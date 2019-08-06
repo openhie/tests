@@ -58,14 +58,14 @@ Create 10 records with seed 1234 for reproducibility.
 
 Copy the records to the `data` folder.
 ```sh
-cp output/fhir/*.json ~/src/github.com/openhie/tests/examples/components/healthworker/steps/data/
+cp output/fhir/*.json ~/src/github.com/openhie/tests/examples/components/healthworker/data/
 ```
 
 Launch your FHIR server of choice. Upload the records to a FHIR server.
 ```sh
 for i in $( ls data); do
     echo $i
-    curl http://localhost:8080/baseR4 --data-binary "@/Users/richard/src/github.com/openhie/tests/examples/components/healthworker/steps/data/$i" -H "Content-Type: application/fhir+json"
+    curl http://localhost:8080/baseR4 --data-binary "@/Users/richard/src/github.com/openhie/tests/examples/components/healthworker/data/$i" -H "Content-Type: application/fhir+json"
 done
 ```
 
